@@ -1,29 +1,39 @@
-# [My portofolio](https://jerry-py.github.io)
+# Next.js & NextUI Template
 
-| Nothing special here just my portofolio, created for fun:
+This is a template for creating applications using Next.js 13 (app directory) and NextUI (v2).
 
-This was created using:
+## Technologies Used
 
-| Module | Name |
-| ------ | ---- |
-| Bootstrap | https://getbootstrap.com/ |
-| Particles.js | https://github.com/VincentGarreau/particles.js |
-| Typed.js | https://github.com/mattboldt/typed.js |
-| Animated.css | https://github.com/animate-css/animate.css |
-| Font Awesome Icons | https://fontawesome.com/ |
-| Google Font: Montserrat | https://fonts.google.com/ |
+- [Next.js 13](https://nextjs.org/docs/getting-started)
+- [NextUI v2](https://nextui.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Tailwind Variants](https://tailwind-variants.org)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [next-themes](https://github.com/pacocoursey/next-themes)
 
+## How to Use
 
-## [Landing Section](https://jerry-py.github.io)
+### Use the template with create-next-app
 
-![Landing](./src/readme1.png)
+To create a new project based on this template using `create-next-app`, run the following command:
 
+```bash
+npx create-next-app -e https://github.com/nextui-org/next-app-template
+```
 
-## [About Section](https://jerry-py.github.io#about)
+### Install dependencies
 
-![About](src/readme2.png)
+```bash
+npm install
+```
 
+### Run the development server
 
-## [Contributions/Project](https://jerry-py.github.io/#projects)
+```bash
+npm run dev
+```
 
-![Projects](src/readme3.png)
+## License
+
+Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
