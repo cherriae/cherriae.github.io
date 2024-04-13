@@ -1,0 +1,78 @@
+import {Stars} from "@react-three/drei";
+import {Canvas} from "@react-three/fiber";
+import React, {useEffect} from "react";
+import {animate, motion, useMotionTemplate, useMotionValue,} from "framer-motion";
+import {Image} from "@nextui-org/react";
+
+const COLORS_TOP = ["#29251d", "#2f3774", "#4c6394", "#7ea4b0", "#cdd27e"];
+
+export const Contacts = () => {
+    const color = useMotionValue(COLORS_TOP[0]);
+
+    useEffect(() => {
+        animate(color, COLORS_TOP, {
+            ease: "easeInOut",
+            duration: 10,
+            repeat: Infinity,
+            repeatType: "mirror",
+        });
+    }, []);
+
+    const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #020617 50%, ${color})`;
+    const border = useMotionTemplate`1px solid ${color}`;
+    const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
+
+    return (
+        <motion.section
+            style={{
+                backgroundImage,
+            }}
+            className="contacts relative grid min-h-screen place-content-center overflow-hidden bg-gray-950 px-4 py-24 text-gray-200"
+        >
+            <div className="relative z-10 flex flex-col items-center">
+                <h1 className="main max-w-4xl bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-4xl font-medium leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
+                    Contacts
+                </h1>
+                <p className="secondary my-6 max-w-xl text-center text-base leading-relaxed md:text-xl md:leading-relaxed">
+                    If you want to reach out to me then reach out to me by
+                </p>
+                <div className="grid grid-cols-2 gap-4 mt-4">
+                    <div
+                        className="flex items-center flex-col">
+                        <h3 className="text-3xl text-center main">Email</h3>
+                        <hr className="align-middle border-gray-200 my-2 w-[80%] overflow-x-hidden m-auto"/>
+                        <motion.button
+                            style={{
+                                border,
+                                boxShadow,
+                            }}
+                            whileHover={{
+                                scale: 1.015,
+                            }}
+                            whileTap={{
+                                scale: 0.985,
+                            }}
+                            className="flex justify-center w-fit items-center text-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50 my-10"
+                        >
+                            theofficialjerrypy@gmail.com
+                        </motion.button>
+                    </div>
+
+                    <div>
+                        <h3 className="text-3xl main text-center">Discord</h3>
+                        <hr className="align-middle border-gray-200 my-2 w-[90%] overflow-x-hidden m-auto"/>
+                        <Image width={"400"} height={175}
+                               src={"https://discord-readme-badge.vercel.app/api?id=827660621662257162"} alt={"discord"}
+                               className={"my-10"}/>
+                    </div>
+                </div>
+            </div>
+
+            <div className="absolute inset-0 z-0">
+                <Canvas>
+                    <Stars radius={50} count={2500} factor={4} fade speed={2}/>
+                </Canvas>
+            </div>
+        </motion.section>
+    );
+};

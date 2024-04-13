@@ -3,14 +3,13 @@ import {Metadata, Viewport} from "next";
 import {siteConfig} from "@/config/site";
 import {fontSans} from "@/config/fonts";
 import {Providers} from "./providers";
-import {Navbar} from "@/components/navbar";
 import {Link} from "@nextui-org/link";
 import clsx from "clsx";
+import {Navbar} from "@/components/navbar";
 
 export const viewport: Viewport = {
     themeColor: [
-        {media: "(prefers-color-scheme: light)", color: "white"},
-        {media: "(prefers-color-scheme: dark)", color: "black"},
+        {color: "white"}
     ],
     initialScale: 1,
     width: 'device-width'
@@ -50,13 +49,13 @@ export default function RootLayout({
                 fontSans.variable
             )}
         >
-        <Providers themeProps={{attribute: "class", defaultTheme: "dark"}}>
+        <Providers themeProps={{attribute: "class", defaultTheme: "light"}}>
             <Navbar/>
             <main className="px-0">
                 {children}
             </main>
-            <footer className="relative bottom-0 w-full flex py-3 p-6 text-start">
-                <div className={"secondary container items-start justify-start md:ml-12"}>
+            <footer className="bottom-0 w-full relative flex py-3 p-6 text-start z-10">
+                <div className={"secondary container items-start justify-start md:ml-20"}>
                     <span className={"font-bold"}>©2023-2024 Jerry</span>
                 </div>
                 <Link
@@ -65,7 +64,7 @@ export default function RootLayout({
                     href="https://github.com/cherriae"
                     title="Cherriae"
                 >
-                    <span className={"secondary"}>Made by</span>
+                    <span className={"secondary"}>Made and built by</span>
                     <p className="text-primary">Jerry</p>
                 </Link>
             </footer>

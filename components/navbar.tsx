@@ -1,11 +1,11 @@
 "use client"
 import {
-	Navbar as NextUINavbar,
-	NavbarBrand,
-	NavbarContent,
-	NavbarItem,
-	NavbarMenuItem,
-	NavbarMenuToggle,
+    Navbar as NextUINavbar,
+    NavbarBrand,
+    NavbarContent,
+    NavbarItem,
+    NavbarMenuItem,
+    NavbarMenuToggle,
 } from "@nextui-org/navbar";
 import {Link} from "@nextui-org/link";
 import {Image, NavbarMenu} from "@nextui-org/react";
@@ -69,9 +69,8 @@ export const Navbar = React.memo(() => {
 
             </NavbarContent>
             <NavbarMenu
-                className="box-border border-shadow-lg p-0 capitalize rounded-[1.1rem] shadow flex flex-col mt-10 fixed w-[300px]">
-                <hr className="align-middle border-gray-200 my-2 w-[90%] overflow-x-hidden m-auto"/>
-                <div className="flex flex-col p-4 space-y-10 mt-3">
+                className="box-border border-shadow-lg p-0 capitalize rounded-[1.1rem] shadow flex flex-col mt-5 fixed w-[300px]">
+                <div className="flex flex-col p-4 space-y-10">
                     <NavbarMenuItem>
                         <Link
                             color="success"
