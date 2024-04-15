@@ -3,6 +3,7 @@ import {Canvas} from "@react-three/fiber";
 import React, {useEffect} from "react";
 import {animate, motion, useMotionTemplate, useMotionValue,} from "framer-motion";
 import {Image} from "@nextui-org/react";
+import { Toaster, toast } from "sonner";
 
 const COLORS_TOP = ["#29251d", "#2f3774", "#4c6394", "#7ea4b0", "#cdd27e"];
 
@@ -22,6 +23,13 @@ export const Contacts = () => {
     const border = useMotionTemplate`1px solid ${color}`;
     const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
 
+    function CopyEmailAndToast() {
+        const emailText = 'theofficialjerrypy@gmail.com';
+        navigator.clipboard.writeText(emailText);
+        toast('📋 Email copied to clipboard!', {className: "main"})
+    }
+
+
     return (
         <motion.section
             style={{
@@ -36,12 +44,14 @@ export const Contacts = () => {
                 <p className="secondary my-6 max-w-xl text-center text-base leading-relaxed md:text-xl md:leading-relaxed">
                     If you want to reach out to me then reach out to me by
                 </p>
-                <div className="grid grid-cols-2 gap-4 mt-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
                     <div
                         className="flex items-center flex-col">
                         <h3 className="text-3xl text-center main">Email</h3>
                         <hr className="align-middle border-gray-200 my-2 w-[80%] overflow-x-hidden m-auto"/>
+                        <Toaster />
                         <motion.button
+                            onClick={CopyEmailAndToast}
                             style={{
                                 border,
                                 boxShadow,

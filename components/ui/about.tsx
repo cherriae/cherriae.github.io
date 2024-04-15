@@ -2,8 +2,8 @@ import React from 'react';
 
 const AboutSection: React.FC = () => {
     return (
-        <section className="aboutme h-[70rem] relative overflow-hidden">
-            {/* Add your content here */}
+        <section className="aboutme h-[70rem] my-5 relative overflow-hidden">
+            <h1 className='text-center text-6xl main'>About me</h1>
             <div className="absolute bottom-0 left-0 w-full">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                     <path
