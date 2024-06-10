@@ -1,9 +1,33 @@
 import React from 'react';
+import {Image} from "@nextui-org/react";
+import {Link} from "@nextui-org/link";
 
 const AboutSection: React.FC = () => {
     return (
-        <section className="aboutme h-[70rem] my-5 relative overflow-hidden">
+        <section className="aboutme h-[60rem] mt-5 relative overflow-hidden">
             <h1 className='text-center text-6xl main'>About me</h1>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10 p-8">
+                <div className={"grid place-items-center"}>
+                    <Image
+                        src={"/logo.jpg"}
+                        alt={"Me"}
+                        className={"mt-10"}
+                    />
+                </div>
+                <div className={"mt-10 secondary text-lg"}>
+                    <p>Hey! I'm Jerry! I'm just someone who just code and do programming for fun. I like to read, play
+                        chess, and basketball. I am a part of <Link href={"https://bthsrobotics.com"} target={"_blank"}>Team
+                            334 (FRC)</Link> for I am a programmer.</p>
+                    <br/>
+                    <p>🌱 Currently Learning how to code Java</p>
+                    <p>😄 Pronouns: He/Him</p>
+                    <div>
+                        <Image width={"400"} height={175}
+                               src={"https://discord-readme-badge.vercel.app/api?id=827660621662257162"} alt={"discord"}
+                               className={"my-10"}/>
+                    </div>
+                </div>
+            </div>
             <div className="absolute bottom-0 left-0 w-full">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                     <path

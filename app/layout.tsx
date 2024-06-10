@@ -5,7 +5,6 @@ import {fontSans} from "@/config/fonts";
 import {Providers} from "./providers";
 import {Link} from "@nextui-org/link";
 import clsx from "clsx";
-import {Navbar} from "@/components/navbar";
 
 export const viewport: Viewport = {
     themeColor: [
@@ -50,7 +49,6 @@ export default function RootLayout({
             )}
         >
         <Providers themeProps={{attribute: "class", defaultTheme: "light"}}>
-            <Navbar/>
             <main className="px-0">
                 {children}
             </main>
