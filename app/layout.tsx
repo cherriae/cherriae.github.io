@@ -52,7 +52,7 @@ export default function RootLayout({
             <main className="px-0">
                 {children}
             </main>
-            <footer className="bottom-0 w-full relative flex py-3 p-6 text-start z-10">
+            <footer className="bottom-0 w-full relative flex py-3 p-6 text-start z-0 bg-[#c0cbff]">
                 <div className={"secondary container items-start justify-start md:ml-20"}>
                     <span className={"font-bold"}>©2023-2024 Jerry</span>
                 </div>

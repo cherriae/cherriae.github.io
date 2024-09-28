@@ -3,10 +3,11 @@ import {HeroHighlight, Highlight} from "@/components/ui/hero";
 import {motion} from "framer-motion";
 import AboutSection from "@/components/ui/about";
 import {Contacts} from "@/components/ui/contacts";
+import ProjectSection from "@/components/ui/projects";
 
 export default function Home() {
     return (
-        <div>
+        <div className="">
             <HeroHighlight className={"hero"}>
                 <motion.h1
                     initial={{
@@ -29,10 +30,12 @@ export default function Home() {
                     </Highlight>.
                     <br/>
                     <p className={"secondary text-4xl"}>I build and program things</p>
+                    {/* Add the Links: Github, Insta,  */}
 
                 </motion.h1>
             </HeroHighlight>
             <AboutSection/>
+            <ProjectSection/>
             <Contacts/>
         </div>
     );
