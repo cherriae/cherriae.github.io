@@ -22,7 +22,7 @@ const AboutSection: React.FC = () => {
                     <p>🌱 Currently Learning how to code Java</p>
                     <p>😄 Pronouns: He/Him</p>
                     <div>
-                        <Image width={"400"} height={175}
+                        <Image width={"500"} height={300}
                                src={"https://discord-readme-badge.vercel.app/api?id=827660621662257162"} alt={"discord"}
                                className={"my-10"}/>
                     </div>

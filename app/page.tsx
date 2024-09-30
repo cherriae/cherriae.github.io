@@ -4,6 +4,22 @@ import {motion} from "framer-motion";
 import AboutSection from "@/components/ui/about";
 import {Contacts} from "@/components/ui/contacts";
 import ProjectSection from "@/components/ui/projects";
+import { GithubIcon } from "@/components/icons";
+import { InstagramIcon } from "@/components/ui/utils/icons";
+
+
+const SocialLink = ({ href, icon: Icon, label }) => (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="main"
+      aria-label={label}
+    >
+      <Icon size={43} />
+    </a>
+  );
+
 
 export default function Home() {
     return (
@@ -30,8 +46,18 @@ export default function Home() {
                     </Highlight>.
                     <br/>
                     <p className={"secondary text-4xl"}>I build and program things</p>
-                    {/* Add the Links: Github, Insta,  */}
-
+                    <div className="flex flex-row justify-center gap-3 my-3">
+                        <SocialLink
+                            href="https://github.com/cherriae"
+                            icon={GithubIcon}
+                            label="GitHub Profile"
+                        />
+                        <SocialLink
+                            href="https://instagram.com/_aoikkk"
+                            icon={InstagramIcon}
+                            label="Instagram Profile"
+                        />
+                    </div>
                 </motion.h1>
             </HeroHighlight>
             <AboutSection/>

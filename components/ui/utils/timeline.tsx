@@ -40,9 +40,6 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         <h2 className="text-6xl mb-4 text-black dark:text-white ">
           Here is what I've been up to
         </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-lg text-center">
-            A timeline of my projects and experiences
-        </p>
       </div>
 
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
