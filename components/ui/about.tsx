@@ -15,7 +15,7 @@ const AboutSection: React.FC = () => {
                     />
                 </div>
                 <div className={"mt-10 secondary text-lg"}>
-                    <p>Hey! I'm Jerry! I'm just someone who just code and do programming for fun. I like to read, play
+                    <p>Hey! I&quot;m Jerry! I&quot;m just someone who just code and do programming for fun. I like to read, play
                         chess, and basketball. I am a part of <Link href={"https://bthsrobotics.com"} target={"_blank"}>Team
                             334 (FRC)</Link> for I am a programmer.</p>
                     <br/>

@@ -48,7 +48,7 @@ export default function RootLayout({
                 fontSans.variable
             )}
         >
-        <Providers themeProps={{attribute: "class", defaultTheme: "light"}}>
+        <Providers themeProps={{attribute: "class", defaultTheme: "light", children: children}}>
             <main className="px-0">
                 {children}
             </main>

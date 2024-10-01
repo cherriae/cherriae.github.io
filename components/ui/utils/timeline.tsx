@@ -38,7 +38,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     >
       <div className="main text-center max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-6xl mb-4 text-black dark:text-white ">
-          Here is what I've been up to
+          Here is what I&quot;ve been up to
         </h2>
       </div>
 

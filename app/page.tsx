@@ -6,9 +6,10 @@ import {Contacts} from "@/components/ui/contacts";
 import ProjectSection from "@/components/ui/projects";
 import { GithubIcon } from "@/components/icons";
 import { InstagramIcon } from "@/components/ui/utils/icons";
+import { IconSvgProps } from "@/types";
 
 
-const SocialLink = ({ href, icon: Icon, label }) => (
+const SocialLink = ({ href, icon: Icon, label } : {href: string, icon: React.FC<IconSvgProps>, label: string}) => (
     <a
       href={href}
       target="_blank"
