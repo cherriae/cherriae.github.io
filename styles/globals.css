@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: '--monsterrat';
+    src: url("../public/fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: '--poppins';
+    src: url("../public/fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+    font-family: '--titillium';
+    src: url("../public/fonts/TitilliumWeb-Light.ttf");
+}
+
+
+.main {
+    font-family: "--monsterrat", "--poppins", "sans-serif";
+}
+
+.secondary {
+    font-family: "--titillium", "sans-serif";
+}
+
+* {
+    scroll-behavior: smooth;
+}
