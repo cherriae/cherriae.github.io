@@ -18,7 +18,7 @@ const ImageModal = ({ src, alt, isOpen, onClose }: { src: string; alt: string; i
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 onClick={onClose}
-                className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+                className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 rounded-xl"
             >
                 <motion.div
                     initial={{ scale: 0.5 }}

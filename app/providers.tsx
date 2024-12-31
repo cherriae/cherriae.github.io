@@ -9,7 +9,7 @@ import {PropsWithChildren} from "react";
 
 export interface ProvidersProps {
     children: React.ReactNode;
-    themeProps?: ThemeProviderProps;
+    themeProps?: Partial<ThemeProviderProps>;
 }
 
 export function Providers({children, themeProps}: PropsWithChildren<ProvidersProps>) {
@@ -17,7 +17,7 @@ export function Providers({children, themeProps}: PropsWithChildren<ProvidersPro
 
     return (
         <NextUIProvider navigate={router.push}>
-            <NextThemesProvider defaultTheme="light" enableSystem={true} {...themeProps}>
+            <NextThemesProvider {...themeProps}>
                 <div className="min-h-screen">
                     {children}
                 </div>
