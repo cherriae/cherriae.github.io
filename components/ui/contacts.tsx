@@ -49,38 +49,31 @@ export const Contacts = () => {
 
     return (
         <motion.section
-            style={{
-                backgroundImage,
-            }}
-            className="contacts relative grid min-h-screen place-content-center overflow-hidden bg-gray-950 px-4 py-24 text-gray-200"
+            style={{ backgroundImage }}
+            className="relative min-h-screen overflow-hidden bg-gray-950 px-4 py-24 text-gray-200"
         >
-            <div className="relative z-10 flex flex-col items-center">
-                <h1 className="main max-w-4xl bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-4xl font-medium leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
-                    Contacts
+            <div className="relative z-10 container mx-auto max-w-4xl flex flex-col items-center">
+                <h1 className="main bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-5xl font-bold text-transparent md:text-6xl mb-8">
+                    Get in Touch
                 </h1>
-                <p className="secondary my-6 max-w-xl text-center text-base leading-relaxed md:text-xl md:leading-relaxed">
-                    If you want to reach out to me then reach out to me by
+                
+                <p className="secondary text-center text-lg md:text-xl text-gray-300 max-w-2xl mb-12">
+                    Feel free to reach out to me through email
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-1 gap-4 mt-4">
-                    <div className="flex items-center flex-col">
-                        <h3 className="text-3xl text-center main">Email</h3>
-                        <hr className="align-middle border-gray-200 my-2 w-[80%] overflow-x-hidden m-auto"/>
-                        <Toaster />
+
+                <div className="w-full max-w-md">
+                    <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 shadow-xl rounded-xl">
+                        <h3 className="text-2xl font-semibold text-center main mb-6">Email</h3>
+                        <Toaster position="bottom-center" />
                         <motion.button
                             onClick={CopyEmailAndToast}
-                            style={{
-                                border,
-                                boxShadow,
-                            }}
-                            whileHover={{
-                                scale: 1.015,
-                            }}
-                            whileTap={{
-                                scale: 0.985,
-                            }}
-                            className="flex main justify-center w-fit items-center text-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50 my-10"
+                            style={{ border, boxShadow }}
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            className="w-full flex justify-center items-center gap-3 rounded-xl bg-gray-800/50 px-6 py-4 text-gray-50 transition-colors hover:bg-gray-800/70"
                         >
-                            <EmailIcon /> theofficialjerrypy@gmail.com
+                            <EmailIcon />
+                            <span className="font-medium">theofficialjerrypy@gmail.com</span>
                         </motion.button>
                     </div>
                 </div>

@@ -44,28 +44,32 @@ export default function RootLayout({
         <head/>
         <body
             className={clsx(
-                "min-h-screen bg-background w-full scroll-smooth",
+                "min-h-screen bg-background font-sans antialiased",
                 fontSans.variable
             )}
         >
-        <Providers themeProps={{attribute: "class", defaultTheme: "light", children: children}}>
-            <main className="px-0">
-                {children}
-            </main>
-            <footer className="bottom-0 w-full relative flex py-3 p-6 text-start z-0 bg-[#c0cbff]">
-                <div className={"secondary container items-start justify-start md:ml-20"}>
-                    <span className={"font-bold"}>©2023-2024 Jerry</span>
-                </div>
-                <Link
-                    isExternal
-                    className="main flex justify-items-end gap-1 text-current"
-                    href="https://github.com/cherriae"
-                    title="Cherriae"
-                >
-                    <span className={"secondary"}>Made and built by</span>
-                    <p className="text-primary">Jerry</p>
-                </Link>
-            </footer>
+        <Providers themeProps={{attribute: "class", defaultTheme: "light"}}>
+            <div className="relative flex flex-col min-h-screen">
+                {/* <main className="mx-auto flex-grow"> */}
+                    {children}
+                {/* </main> */}
+                <footer className="w-full py-3 px-6 bg-[#c0cbff]">
+                    <div className="mx-auto flex flex-col md:flex-row justify-between items-center">
+                        <div className="secondary mb-2 md:mb-0">
+                            <span className="font-bold">©2023-2024 Jerry</span>
+                        </div>
+                        <Link
+                            isExternal
+                            className="main flex items-center gap-1 text-current"
+                            href="https://github.com/cherriae"
+                            title="Cherriae"
+                        >
+                            <span className="secondary">Made and built by</span>
+                            <p className="text-primary">Jerry</p>
+                        </Link>
+                    </div>
+                </footer>
+            </div>
         </Providers>
         </body>
         </html>

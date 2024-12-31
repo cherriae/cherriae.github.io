@@ -17,7 +17,11 @@ export function Providers({children, themeProps}: PropsWithChildren<ProvidersPro
 
     return (
         <NextUIProvider navigate={router.push}>
-            <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
+            <NextThemesProvider defaultTheme="light" enableSystem={true} {...themeProps}>
+                <div className="min-h-screen">
+                    {children}
+                </div>
+            </NextThemesProvider>
         </NextUIProvider>
     );
 }

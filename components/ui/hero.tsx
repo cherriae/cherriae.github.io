@@ -15,27 +15,18 @@ export const HeroHighlight = ({
     let mouseX = useMotionValue(0);
     let mouseY = useMotionValue(0);
 
-    function handleMouseMove({
-                                 currentTarget,
-                                 clientX,
-                                 clientY,
-                             }: React.MouseEvent<HTMLDivElement>) {
-        if (!currentTarget) {
-          return;
-        }
-        let {left, top} = currentTarget.getBoundingClientRect();
-
-        mouseX.set(clientX - left);
-        mouseY.set(clientY - top);
-    }
-
     return (
         <div
             className={cn(
-                "relative h-[50rem] flex items-center bg-[#e9edff] justify-center w-full group",
+                "relative min-h-[80vh] flex items-center bg-[#e9edff] justify-center w-full group",
                 containerClassName
             )}
-            onMouseMove={handleMouseMove}
+            onMouseMove={({currentTarget, clientX, clientY}) => {
+                if (!currentTarget) return;
+                const {left, top} = currentTarget.getBoundingClientRect();
+                mouseX.set(clientX - left);
+                mouseY.set(clientY - top);
+            }}
         >
             <div
                 className="absolute inset-0 bg-dot-thick-violet-200 dark:bg-dot-thick-violet-800  pointer-events-none"/>
