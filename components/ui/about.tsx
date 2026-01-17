@@ -31,7 +31,7 @@ const AboutSection: React.FC = () => {
                         </p>
                         
                         <div className="space-y-2">
-                            <p>🌱 Currently Learning how to code Java</p>
+                            <p>🌱 Currently working on 2026 Castle</p>
                             <p>😄 Pronouns: He/Him</p>
                         </div>
                         
