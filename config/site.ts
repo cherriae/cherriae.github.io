@@ -15,8 +15,8 @@ export const siteConfig = {
             color: ""
         },
         {
-            label: "Projects",
-            href: "#projects",
+            label: "Timeline",
+            href: "#timeline",
             color: ""
         },
         {

@@ -3,7 +3,7 @@ import {HeroHighlight, Highlight} from "@/components/ui/hero";
 import {motion} from "framer-motion";
 import AboutSection from "@/components/ui/about";
 import {Contacts} from "@/components/ui/contacts";
-import ProjectSection from "@/components/ui/timeline";
+import TimelineSection from "@/components/ui/timeline";
 import { GithubIcon } from "@/components/icons";
 import { InstagramIcon } from "@/components/ui/utils/icons";
 import { IconSvgProps } from "@/types";
@@ -100,7 +100,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
             >
-                <ProjectSection/>
+                <TimelineSection/>
             </motion.div>
 
             <motion.div

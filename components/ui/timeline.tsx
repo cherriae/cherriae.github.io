@@ -85,7 +85,7 @@ const ProjectImage = ({ src, alt }: { src: string; alt: string }) => {
     );
 };
 
-const ProjectSection: React.FC = () => {
+const Timelineection: React.FC = () => {
     const [hoveredButtons, setHoveredButtons] = useState<{[key: string]: boolean}>({});
 
     const handleButtonHover = (id: string, isHovered: boolean) => {
@@ -603,4 +603,4 @@ const ProjectSection: React.FC = () => {
     );
 };
 
-export default ProjectSection;
+export default Timelineection;
